@@ -2,6 +2,7 @@
 #include "IPage.hpp"
 #include <map>
 #include <string>
+#include <vector>
 
 namespace ui {
 
@@ -22,6 +23,12 @@ public:
 
     /// @brief 切换到指定名称的页面
     void switchToPage(const std::string& name);
+
+    /**
+     * @brief 获取所有已注册页面的名称列表。
+     * @return 一个包含所有页面名称的 std::vector<std::string>。
+     */
+    std::vector<std::string> getRegisteredPageNames() const;
 };
 
 } // namespace ui
